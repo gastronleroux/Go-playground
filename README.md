@@ -24,5 +24,5 @@ You're free to play around with the goban, including simulating an actual game.
 You can also download or upload sgf files and freely explore the game. When passing the game twice, the app will try to count the score. The score proposition can be modified by clicking on groups the user believes are marked wrong.  
 ![upload and score](https://github.com/gastronleroux/Go-playground/blob/master/appusage/2.gif)
 
-The review feature let's you interactively dive into a set od 210 games played by professionals. If the board situation matches one of the games in the set, the positions of the next moves are displayed on the board. Hovering over a given move shows the probability of winning.  
+The review feature let's you interactively dive into a set of 210 games played by professionals. If the board situation matches one of the games in the set, the positions of the next moves are displayed on the board. Hovering over a given move shows the probability of winning.  
 ![play](https://github.com/gastronleroux/Go-playground/blob/master/appusage/3.gif)
