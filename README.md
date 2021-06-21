@@ -1,8 +1,8 @@
 ## Go playground
 
-Simple web app with a goban (go board) free to mess with or play an offline game of Go
-Created mainly with Javascript and some PHP.
-The app assumes that the user is already familiar with Go and its rules and nuances.
+Simple web app with a goban (go board) free to mess with or play an offline game of Go.  
+Created mainly with Javascript and some PHP.  
+The app assumes that the user is already familiar with Go and its rules and nuances.  
 To learn more about Go, [visit here](https://en.wikipedia.org/wiki/Go_(game)). To learn to play Go, [visit here](https://online-go.com/learn-to-play-go).
 
 ## Installation and Setup Instructions
