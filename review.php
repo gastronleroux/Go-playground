@@ -2,23 +2,23 @@
 <head>
 <title>Go Playground</title>
 <meta charset="UTF-8">
-<link rel="icon" href="favicon.png" type="image/x-icon">
+<link rel="icon" href="img/favicon.png" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="gostyle.css">
+<link rel="stylesheet" type="text/css" href="src/gostyle.css">
 </head>
 <body>
 <div style="position:absolute; width:50%; margin-top:20px; text-align:right;">
-<a href='index.html'><img id="switch" style="margin-right:325px;" width="87px" height="69.2px" draggable="false" src="switch.png"></a>
+<a href='index.html'><img id="switch" style="margin-right:325px;" width="87px" height="69.2px" draggable="false" src="img/switch.png"></a>
 </div>
 <div id='download'></div>
 <div style="position:absolute;margin-left:50%;margin-top:20px">
 <span style="background-color: rgba(0, 0, 0, 0.2);margin-left:320px;border-radius: 25px;">
-<img id="b_i" style="margin-left: 5px; opacity: 1;" draggable="false" width="40px" height="30px" src="bowl_b.png">
+<img id="b_i" style="margin-left: 5px; opacity: 1;" draggable="false" width="40px" height="30px" src="img/bowl_b.png">
 <span style="font-family:Tahoma, Geneva, sans-serif;font-size:17px;font-weight:bold;color:white;margin-right:10px; opacity:0.6" id="black_j"></span>
 <span style="font-family:Tahoma, Geneva, sans-serif;font-size:17px;font-weight:bold;color:white;margin-right:5px; opacity:0.6" id="black_f"></span></span>
 <br><br>
 <span style="background-color: rgba(0, 0, 0, 0.2);margin-left:320px;border-radius: 25px;">
-<img id="w_i" style="margin-left: 5px; opacity: 0.4;" draggable="false" width="40px" height="30px" src="bowl_w.png">
+<img id="w_i" style="margin-left: 5px; opacity: 0.4;" draggable="false" width="40px" height="30px" src="img/bowl_w.png">
 <span style="font-family:Tahoma, Geneva, sans-serif;font-size:17px;font-weight:bold;color:white;margin-right:10px; opacity:0.6" id="white_j"></span>
 <span style="font-family:Tahoma, Geneva, sans-serif;font-size:17px;font-weight:bold;color:white;margin-right:5px; opacity:0.6" id="white_f"></span></span>
 <br><br>
@@ -29,12 +29,12 @@
 <div onclick="where(event)" onmousemove="hoverr(event)" onmouseout="setnot()" id="board"></div></div>
 <div id="btns" style="transition: opacity 1s ease 0s; margin: 0px auto; position: relative; width: 600px; height: 80px; pointer-events: auto; opacity: 1;">
 <div onclick='moves()'>
-<div style="background-image: url('rew3.png');" class="rew" id="rew3" onclick="rewind(0)" ></div>
-<div style="background-image: url('rew2.png'); margin-left: 10px; " class="rew" id="rew2" onclick="rewind(-10)" ></div>
-<div style="background-image: url('rew1.png'); margin-left: 10px;" class="rew" id="rew1" onclick="rewind(-1)" ></div>
-<div style="background-image: url('rew1.png'); margin-left: 45px; transform: scaleX(-1);" class="rew" id="rew4" onclick="rewind(1)" ></div>
-<div style="background-image: url('rew2.png'); margin-left: 10px; transform: scaleX(-1);" class="rew" id="rew5" onclick="rewind(10)" ></div>
-<div style="background-image: url('rew3.png'); margin-left: 10px; transform: scaleX(-1);" class="rew" id="rew6" onclick="rewind(11)" ></div>
+<div style="background-image: url('img/rew3.png');" class="rew" id="rew3" onclick="rewind(0)" ></div>
+<div style="background-image: url('img/rew2.png'); margin-left: 10px; " class="rew" id="rew2" onclick="rewind(-10)" ></div>
+<div style="background-image: url('img/rew1.png'); margin-left: 10px;" class="rew" id="rew1" onclick="rewind(-1)" ></div>
+<div style="background-image: url('img/rew1.png'); margin-left: 45px; transform: scaleX(-1);" class="rew" id="rew4" onclick="rewind(1)" ></div>
+<div style="background-image: url('img/rew2.png'); margin-left: 10px; transform: scaleX(-1);" class="rew" id="rew5" onclick="rewind(10)" ></div>
+<div style="background-image: url('img/rew3.png'); margin-left: 10px; transform: scaleX(-1);" class="rew" id="rew6" onclick="rewind(11)" ></div>
 </div>
 </div>
 
@@ -42,7 +42,7 @@
 <div class="modal-content"><p style="opacity:1;font-size: 23px;text-align:center" id="popup"></p></div>
 </div>
 <p id="check"></p>
-<script src='play.js'></script>
+<script src='src/play.js'></script>
 <script>
 
 document.getElementById("board").addEventListener('mousemove', function(event){
@@ -82,8 +82,8 @@ function show_all(){
 		for(v=0;v<19;v++){
 			place=document.getElementById((c*100)+v);
 			if(tab[c][v]==0&&place.style.opacity==1) place.setAttribute("src", "");
-			if(tab[c][v]==1){ place.style.opacity=1; place.setAttribute("src", "black.png"); }
-			if(tab[c][v]==2){ place.style.opacity=1; place.setAttribute("src", "white.png"); }
+			if(tab[c][v]==1){ place.style.opacity=1; place.setAttribute("src", "img/black.png"); }
+			if(tab[c][v]==2){ place.style.opacity=1; place.setAttribute("src", "img/white.png"); }
 		}
 	}
 	if(iler!=1){
@@ -112,8 +112,8 @@ function moves(){
 				document.getElementById((c*100)+v).style.opacity=1;
 				for(k=1;k<211;k++){
 					if(pro[k].length>histor+1&&c==pro[k][histor][0]&&v==pro[k][histor][1]&&pro_c[k][histor]==0){
-						if(turn==1)document.getElementById(c*100+v).setAttribute("src", "black.png");
-						if(turn==2)document.getElementById(c*100+v).setAttribute("src", "white.png");
+						if(turn==1)document.getElementById(c*100+v).setAttribute("src", "img/black.png");
+						if(turn==2)document.getElementById(c*100+v).setAttribute("src", "img/white.png");
 						document.getElementById(c*100+v).style.opacity=0.5;
 						iler++;
 						if(iler==1)temp_k=k;
